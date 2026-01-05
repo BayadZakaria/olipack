@@ -10,6 +10,15 @@ st.set_page_config(
     page_icon="🌿",
     layout="wide"
 )
+# --- MASQUER LE MENU STREAMLIT ET LE PIED DE PAGE ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # --- STYLE CSS (Pour un look "Dark Mode" Cinématographique) ---
 st.markdown("""
@@ -122,5 +131,6 @@ with col_resultat:
                 "Destination": "Usine Bioplastique",
                 "Empreinte_Carbone": "Négative"
             })
+
 
 #& C:/Users/pc/AppData/Local/Programs/Python/Python311/python.exe -m streamlit run c:/Users/pc/Desktop/app.py

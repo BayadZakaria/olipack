@@ -1,51 +1,24 @@
-# 🌿 OliPack : Smart Waste Management System
+# 🌿 OliPack : Portail GreenTech
 
-> **Transformation des margines (déchets d'olive) en ressources durables.**
+Bienvenue dans le projet OliPack. Ce dashboard permet de gérer la transformation des déchets oléicoles en ressources de valeur (bioplastiques et pellets).
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://olipack-bayadzakaria.streamlit.app/)
-[![Python](https://img.shields.io/badge/Made_with-Python-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/Status-Prototype-orange)]()
+## 🚀 Configuration Supabase (Cloud)
 
-## 📌 À propos du projet
-Le Maroc produit des millions de litres de **margines** (eaux usées de l'huile d'olive) chaque année. Ces déchets sont polluants pour les sols et les nappes phréatiques.
+Pour lier l'application à votre projet Supabase réel :
 
-**OliPack** est une solution Data-Driven qui vise à :
-1.  **Monitorer** les cuves de stockage des huileries en temps réel (IoT).
-2.  **Optimiser** la collecte logistique avant débordement (Seuils d'alerte).
-3.  **Assurer la traçabilité** de la transformation des margines en ressources valorisables (Bioplastique, Énergie) via QR Code.
+### 1. Clés API
+Allez dans votre dashboard Supabase :
+- **Settings (Roue dentée)** > **API**
+- Copiez `Project URL` -> mettez-le dans `SUPABASE_URL` dans `.env`
+- Copiez `anon public` -> mettez-le dans `SUPABASE_ANON_KEY` dans `.env`
 
-## 🚀 Démonstration
-Accédez au tableau de bord interactif en direct :
-👉 **[Lancer la Démo OliPack](https://olipack-bayadzakaria.streamlit.app/)**
+### 2. Authentification
+- **Authentication** > **Providers** > **Email**
+- **Décochez** "Confirm email" pour tester sans attendre de mail de confirmation.
 
----
+### 3. Schéma SQL
+Si vous ne l'avez pas encore fait, exécutez le script SQL fourni dans le SQL Editor pour créer les tables `profiles`, `predictions` et `collections`.
 
-## 🛠 Fonctionnalités Techniques (MVP)
-Ce prototype démontre mes compétences en **Data Engineering** et développement Python :
-
-* **Simulation IoT :** Contrôle interactif des niveaux de cuves (Streamlit Widgets).
-* **Logique Décisionnelle :** Algorithme de détection de seuils critiques (>80%).
-* **Génération de Données :** Création automatique de rapports JSON et QR Codes (Librairie `qrcode`).
-* **Interface Réactive :** Visualisation dynamique des KPIs (Key Performance Indicators).
-
-## 💻 Stack Technique
-* **Langage :** Python 3.11
-* **Framework Web :** Streamlit
-* **Manipulation de Données :** Pandas
-* **Traitement d'Image :** Pillow / Qrcode
-
----
-
-## ⚠️ Propriété Intellectuelle & Droits d'Auteur
-**© 2026 Zakaria Bayad. Tous droits réservés.**
-
-Ce projet, incluant le code source, le concept "OliPack" et l'architecture logique, est la propriété intellectuelle exclusive de son auteur.
-
-1.  **Consultation autorisée :** Le code est rendu public à des fins de démonstration (Portfolio) et d'évaluation pédagogique/professionnelle.
-2.  **Interdictions :** Toute copie, reproduction, modification ou utilisation commerciale sans l'autorisation écrite explicite de l'auteur est strictement interdite.
-
-Pour toute proposition de collaboration ou demande d'utilisation, veuillez contacter l'auteur directement.
-
----
-
-Made with ❤️ in Morocco by **Zakaria Bayad**.
+## 🛠️ Commandes utiles
+1. `npm install` (pour installer les bibliothèques)
+2. `npm run dev` (pour lancer l'application sur http://localhost:5173)
